@@ -9,7 +9,17 @@ var skillsCtrl = require('../controllers/skills');
 // GET
 router.get('/', skillsCtrl.index);
 
+// GET /skills/new
+router.get('/new', skillsCtrl.new);
+
 // GET .show
 router.get('/:id', skillsCtrl.show);
+
+// POST /skills
+router.post('/', skillsCtrl.create);
+
+// DELETE /skills/:id
+router.delete('/:id', skillsCtrl.delete);
+
 
 module.exports = router;
